@@ -1,103 +1,93 @@
 import Image from "next/image";
+import "./globals.css";
+import localFont from "next/font/local";
 
+const oceanic = localFont({
+  src: "../public/fonts/TRIAL_Oceanic-Regular.otf",
+});
+
+const oceanic_m = localFont({
+  src: "../public/fonts/TRIAL_Oceanic-Medium.otf",
+});
+
+const gilroy_r = localFont({
+  src: "../public/fonts/Gilroy-Light.otf",
+});
+
+const gilroy_b = localFont({
+  src: "../public/fonts/Gilroy-ExtraBold.otf",
+});
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div>
+      <div className="absolute display-flex py-[10px] px-[430px] ">
+      <Image
+        src="/back.svg" 
+        alt="background"
+        width={5017}
+        height={5017}
+        className="object-cover -z-10"
+      />
+      </div>
+      
+      <div
+        className={`${oceanic.className} display-flex py-[102px] grid grid-rows-[20px_1fr_20px] items-center justify-items-center text-lg font-Oceanic_Regular text-[#496192] text-[270px]`}
+      >
+        <h1>AQUARIM</h1>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div className="grid grid-cols-3 gap-8 items-start">
+        <div className="flex flex-col gap-6 w-full my-[38] mx-[130px]">
+          <h2 className={`${oceanic.className} text-[80px] text-[#E8EDFF] `}>
+            РЫБНЫЙ
+          </h2>
+          <p className={`${gilroy_r.className} text-lg text-white text-[18px] w-[370px]`}>
+            Откройте для себя мир изысканных вкусов с нашими рыбными деликатесами, приготовленными специально для вас
+          </p>
+          <button className="px-[109px] py-[20px] bg-[#E9663D] text-white w-[258px] hover:bg-[#3b4f77] transition">
+            Меню
+          </button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+  
+        <div className="flex justify-center -mt-60 relative z-10">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/shrimp.png"
+            alt="shrimp"
+            width={220}
+            height={590}
+            className="rounded-2xl shadow-lg"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+
+        
+
+        <div className="flex flex-col gap-4 w-full my-[38] mx-[-80px]">
+          <h2 className={`${oceanic.className} text-[80px] text-[#E8EDFF]`}>
+            РЕСТОРАН
+          </h2>
+          <div className="flex justify-center gap-4">
+            <img src="/Frame.svg" alt="" />
+            <p className={`${gilroy_r.className} text-lg text-white text-[18px] w-[319px] text-right`}>
+              Свежая рыба из наших аквариумов <br></br>— гарантированная свежесть
+            </p>
+          </div>
+          <div className="flex justify-center gap-4">
+            <img src="/Frame-1.svg" alt="" />
+            <p className={`${gilroy_r.className} text-lg text-white text-[18px] w-[319px] text-right`}>
+              Качественная доставка, где горячие<br></br> блюда сохраняют свой вкус
+            </p>
+          </div>
+          
+        </div>
+      </div>
+      <div className="flex px-[120px] py-[21px] gap-[120px]">
+        <span className={`${gilroy_r.className} text-white text-[12px] py-[25px]`}>О РЕСТОРАНЕ
+        </span>   
+        <span className={`${oceanic.className} text-white text-[56px] `}>ИСТОРИЯ РЫБНОГО</span>
+      </div>
+      <span className={`${oceanic.className} text-white text-[56px] `}>ИСКУШЕНИЯ</span>
+
     </div>
   );
 }
